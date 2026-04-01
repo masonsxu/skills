@@ -3,26 +3,26 @@
   "evals": [
     {
       "id": 0,
-      "prompt": "我在做一个 React 聊天应用，想用 @chenglou/pretext 来实现类似 iMessage 的气泡效果。每条消息气泡应该自动收缩到最紧凑的宽度，但不超过容器宽度的 80%。我需要知道怎么准备文本、怎么二分搜索最紧宽度、以及怎么拿到最终气泡的宽度和高度。用的是 15px 'Helvetica Neue' 字体，行高 20px。",
-      "expected_output": "使用 prepareWithSegments + walkLineRanges + layout 实现气泡 shrinkwrap 的完整代码",
+      "prompt": "I'm building a React chat app and want to use @chenglou/pretext to create iMessage-style bubbles. Each message bubble should automatically shrink to its tightest width, but not exceed 80% of the container width. I need to know how to prepare the text, binary search for the tightest width, and get the final bubble width and height. Using 15px 'Helvetica Neue' font, line height 20px.",
+      "expected_output": "Complete code using prepareWithSegments + walkLineRanges + layout for bubble shrinkwrap",
       "files": []
     },
     {
       "id": 1,
-      "prompt": "我有一个 Canvas 应用需要手动渲染多段文本。每段文本的宽度可能不同（因为要绕过图片）。我听说 @chenglou/pretext 可以逐行布局，每行用不同宽度。能不能给我写一个完整的示例，展示怎么用 layoutNextLine 流式地把文本渲染到 Canvas 上？字体是 18px Georgia，行高 26px。",
-      "expected_output": "使用 prepareWithSegments + layoutNextLine 流式渲染到 Canvas 的完整代码",
+      "prompt": "I have a Canvas app that needs to manually render multi-paragraph text. Each paragraph can have different widths (because text wraps around images). I heard @chenglou/pretext can do line-by-line layout with different widths per line. Can you write a complete example showing how to use layoutNextLine to stream text rendering onto Canvas? Font is 18px Georgia, line height 26px.",
+      "expected_output": "Complete code using prepareWithSegments + layoutNextLine for streaming Canvas rendering",
       "files": []
     },
     {
       "id": 2,
-      "prompt": "我想用 @chenglou/pretext 做一个虚拟滚动列表，列表项的高度由文本内容决定。文本可能是多行的，宽度是固定的 300px。需要能正确处理包含中文、阿拉伯语、emoji 的混合文本。请给我完整的实现代码。",
-      "expected_output": "使用 prepare + layout 计算多语言文本高度的虚拟滚动列表实现",
+      "prompt": "I want to use @chenglou/pretext for a virtual scrolling list where item heights are determined by text content. Text can be multiline with a fixed width of 300px. It needs to correctly handle mixed text including Chinese, Arabic, and emoji. Please give me a complete implementation.",
+      "expected_output": "Virtual scrolling list implementation using prepare + layout for multilingual text height calculation",
       "files": []
     },
     {
       "id": 3,
-      "prompt": "我想用 @chenglou/pretext 来排版简历和文章，然后直接渲染到 Canvas 或 SVG 上导出为 PDF。现在用 HTML 排版然后 Chrome 无头浏览器导出 PDF，效果很差，看到的和导出的经常不一致——间距、换行位置、字体渲染都有偏差。我希望用 Pretext 做精确的文本排版：标题、正文段落、项目列表，所有文本的换行和位置都由 Pretext 控制，绕过浏览器渲染的不确定性。请给我一个完整的简历排版示例，包含标题、联系信息、多段工作经历（每段有职位、公司、时间、描述），字体用 12px 'Helvetica Neue'，标题用 bold 16px，行高 18px。",
-      "expected_output": "使用 prepareWithSegments + layoutWithLines 精确排版简历到 Canvas/SVG 的完整实现",
+      "prompt": "I want to use @chenglou/pretext to typeset resumes and articles, then render directly to Canvas or SVG for PDF export. Currently using HTML layout with headless Chrome for PDF export, but the results are poor — spacing, line breaks, and font rendering are inconsistent between preview and export. I want Pretext to handle precise text layout: headings, body paragraphs, bullet lists, with all line breaks and positions controlled by Pretext, bypassing browser rendering uncertainty. Please give me a complete resume layout example with a heading, contact info, and multiple work experience sections (each with title, company, dates, description). Use 12px 'Helvetica Neue' for body, bold 16px for headings, line height 18px.",
+      "expected_output": "Complete implementation using prepareWithSegments + layoutWithLines for precise resume layout on Canvas/SVG",
       "files": []
     }
   ]
